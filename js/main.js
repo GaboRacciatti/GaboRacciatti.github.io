@@ -1,4 +1,3 @@
-// Actualizar hash de URL al hacer scroll
 document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('section[id]');
     
@@ -12,10 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const id = entry.target.getAttribute('id');
-                // Actualizar URL sin hacer scroll
                 history.replaceState(null, null, `#${id}`);
                 
-                // Actualizar link activo en navbar
                 document.querySelectorAll('.nav-links a').forEach(link => {
                     link.classList.remove('active');
                     if (link.getAttribute('href') === `#${id}`) {
