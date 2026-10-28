@@ -383,6 +383,11 @@ a {
 }
 
 /* Timeline */
+.timeline {
+    display: grid;
+    gap: 1.5rem;
+}
+
 .timeline-card {
     background: var(--card-strong);
     border: 1px solid var(--border);
@@ -594,7 +599,8 @@ a {
     gap: 0.5rem;
 }
 
-.contact-links a {
+.contact-links a,
+.contact-links span {
     text-decoration: none;
     color: var(--text);
     display: inline-flex;
